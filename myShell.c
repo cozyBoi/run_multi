@@ -9,16 +9,17 @@ int main(){
     int child_status;
     int tokenNum = 0;
     char *tokens[10];
-    for(int i = 0; i < 10; i++) tokens[i] = NULL;
+	int i;
+    for(i = 0; i < 10; i++) tokens[i] = NULL;
     tokenNum = 2;
-    char *command = "~/pmbench/pmbench";
+    char *command = "../pmbench/pmbench";
     char *duration = "60";
-    token[0] = command;
-    token[1] = duration;
+    tokens[0] = command;
+    tokens[1] = duration;
    
     //DEBUG  
     printf("tokenNum %d\n", tokenNum);
-    for(int i = 0; i < tokenNum; i++){
+    for(i = 0; i < tokenNum; i++){
         printf("i %d : token %s\n", i, tokens[i]);
     }
 
@@ -42,7 +43,6 @@ int main(){
     }
     else{
         printf("Error while forking\n");
-        break;
     }
 
     return 0;
